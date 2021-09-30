@@ -5,6 +5,7 @@ import Products from "./products";
 function App() {
   return (
     <div className="App">
+      <div>App</div>
       <Counter />
       <Add />
       <Products />

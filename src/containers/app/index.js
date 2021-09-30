@@ -5,10 +5,12 @@ import {
 } from "react-router-dom";
 import Home from '../home';
 import Create from '../create';
+import Header from "../header";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
+      <Header />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -17,7 +19,7 @@ function App() {
           <Create />
         </Route>
       </Switch>
-    </div>
+    </main>
   );
 }
 

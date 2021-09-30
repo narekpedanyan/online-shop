@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {carInfoModel} from "../../constants/carInfo";
 
 export const productsSlice = createSlice({
   name: 'products',
   initialState: {
-    cars: []
+    data: [carInfoModel, carInfoModel, carInfoModel]
   },
   reducers: {
     addProduct: (state, action) => {
-      state.cars.push(action.payload);
+      state.data.push(action.payload);
     },
   }
 });

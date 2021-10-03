@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Description from '../../components/create/description';
 import Additional from '../../components/create/additional';
 import Resources from "../../components/create/resources";
 import Publish from '../../components/create/publish';
 import './index.scss';
+import {carInfoModel} from "../../constants/carInfo";
 
 const steps = {
   description: {
@@ -30,7 +31,18 @@ const steps = {
 
 const Create = () => {
   const [step, setStep] = useState(steps['description']);
-  const { route} = step;
+  const [productInfo, setProductInfo] = useState(carInfoModel)
+  const {route} = step;
+
+  const handleFieldChange = (e) => {
+    const {name, value} = e.target
+    setProductInfo((prev) => {
+      return {
+        ...prev,
+        [name]: value
+      }
+    })
+  }
 
   const changeStep = (routeData) => {
     setStep(routeData);
@@ -43,7 +55,7 @@ const Create = () => {
           <div className="container">
             {
               Object.keys(steps).map((item) => {
-                const { label } = steps[item];
+                const {label} = steps[item];
                 return (
                   <button
                     onClick={() => changeStep(steps[item])}
@@ -59,7 +71,7 @@ const Create = () => {
         </div>
         <div>
           <div className="container">
-            {route()}
+            {route({handleFieldChange})}
           </div>
         </div>
       </div>

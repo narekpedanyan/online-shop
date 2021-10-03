@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Description = () => {
+const Description = ({handleFieldChange}) => {
+
   return (
     <div>
-      Description
+      <input name="mark" type="text" onChange={handleFieldChange}/>
     </div>
   )
 }

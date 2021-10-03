@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './index.scss';
 
 const ProductCard = ({ data }) => {
   const { mark } = data;
   return (
-    <div>
+    <div className="product-card">
       {mark}
     </div>
   )

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 import {carInfoModel} from "../../constants/carInfo";
 
 export const productsSlice = createSlice({

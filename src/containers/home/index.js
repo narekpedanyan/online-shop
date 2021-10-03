@@ -10,12 +10,20 @@ const Home = () => {
   return (
     <React.Fragment>
       <section className="filters">
-        Filters
+        <div className="container">
+          <div>
+            Filters
+          </div>
+        </div>
       </section>
       <section className="products">
-        {
-          data.map((item, index) => (<ProductCard data={item} key={index}/>))
-        }
+        <div className="container">
+          <div className="products-grid">
+            {
+              data.map((item, index) => (<ProductCard data={item} key={index}/>))
+            }
+          </div>
+        </div>
       </section>
     </React.Fragment>
   )

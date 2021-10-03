@@ -4,7 +4,9 @@ import './index.scss';
 const Header = () => {
   return (
     <header>
-      Header
+      <div className="container">
+        Header
+      </div>
     </header>
   )
 }

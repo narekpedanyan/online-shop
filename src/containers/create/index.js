@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Description from "../../components/create/description";
 import Additional from "../../components/create/additional";
 import Resources from "../../components/create/resources";
 import Publish from "../../components/create/publish";
 import "./index.scss";
-import { carInfoModel } from "../../constants/carInfo";
+import {carInfoModel} from "../../constants/carInfo";
+
 const steps = {
   description: {
     key: "description",
@@ -31,10 +32,10 @@ const steps = {
 const Create = () => {
   const [step, setStep] = useState(steps["description"]);
   const [productInfo, setProductInfo] = useState(carInfoModel);
-  const { route } = step;
+  const {route} = step;
 
   const handleFieldChange = (e) => {
-    const { name, value } = e.target;
+    const {name, value} = e.target;
     setProductInfo((prev) => {
       return {
         ...prev,
@@ -49,8 +50,6 @@ const Create = () => {
 
   console.log(productInfo)
 
-
-
   return (
     <section className="crate-screen">
       <div className="crate-content">
@@ -58,9 +57,9 @@ const Create = () => {
           <div className="container">
             <div className="steps-control-list">
               {Object.keys(steps).map((item) => {
-                const { label } = steps[item];
+                const {label} = steps[item];
                 let activeClassname = '';
-                if (item === step.key){
+                if (item === step.key) {
                   activeClassname = 'active';
                 }
                 return (
@@ -78,7 +77,7 @@ const Create = () => {
           </div>
         </div>
         <div>
-          <div>{route({ handleFieldChange })}</div>
+          <div>{route({handleFieldChange})}</div>
         </div>
       </div>
     </section>

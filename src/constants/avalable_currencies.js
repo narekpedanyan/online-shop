@@ -1,1 +1,6 @@
-export const avalableCurrencies = {};
+export const avalableCurrencies = [
+  'AMD',
+  'RU',
+  'EUR',
+  'USD'
+];

@@ -14,7 +14,6 @@ const Description = ({ handleFieldChange }) => {
               return (
                 <div className="description-content-left_item">
                   <label>{inputName}</label>
-
                   <input
                     className="description-input"
                     name={inputName}
@@ -25,13 +24,29 @@ const Description = ({ handleFieldChange }) => {
                         ? "number"
                         : "text"
                     }
+                    onChange={handleFieldChange}
                   />
                 </div>
               );
             })}
           </div>
           <div className="description-content-right">
-            <div>dabbdbabda</div>
+            <div className="price-control">
+              <div>
+                <div>
+                  <div>
+                    <p>Price*</p>
+                    <input type="number" name="price" onChange={handleFieldChange}/>
+                  </div>
+                </div>
+                <div>
+
+                </div>
+              </div>
+              <p>
+                Խորհուրդ ենք տալիս ավտոմեքենայի գինը նշել ՀՀ դրամով՝ ՙՙ Արժութային կարգավորման և արճութային վերահսկողության մասին՚՚ օրենքի համաձայն
+              </p>
+            </div>
           </div>
         </div>
       </div>

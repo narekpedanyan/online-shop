@@ -46,7 +46,10 @@ const Create = () => {
   const changeStep = (routeData) => {
     setStep(routeData);
   };
-  console.log(step.key);
+
+  console.log(productInfo)
+
+
 
   return (
     <section className="crate-screen">
@@ -56,14 +59,16 @@ const Create = () => {
             <div className="steps-control-list">
               {Object.keys(steps).map((item) => {
                 const { label } = steps[item];
+                let activeClassname = '';
+                if (item === step.key){
+                  activeClassname = 'active';
+                }
                 return (
                   <button
                     onClick={() => changeStep(steps[item])}
                     type="button"
                     key={item}
-                    className={
-                      step.key === label.toLowerCase() ? "btn-active" : null
-                    }
+                    className={activeClassname}
                   >
                     {label}
                   </button>

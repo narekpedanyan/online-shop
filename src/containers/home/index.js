@@ -7,9 +7,7 @@ const Home = () => {
     const productsData = useSelector(state => state.products);
     const {data} = productsData;
     const immediateData = data.filter((item) => item.isimmediate)
-    const newData = data.filter((item) => item.createDate - 24 < 0)
-    console.log(productsData, 'main object');
-    console.log(data, 'properti cars list');
+    const newData = data.filter((item) => item.createDate - 24 < 0);
     return (
         <React.Fragment>
             <section className="filters">
@@ -19,7 +17,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
             <section className="products">
                 <div className="container">
                     <div className="products-grid">

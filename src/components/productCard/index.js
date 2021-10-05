@@ -1,27 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
-// import './Photo'
+import inchVorMIBan from '../../assets/media/car.png';
 
 const ProductCard = ({data}) => {
-    const {mark} = data;
-    const {model} = data;
-    const {price} = data;
-    const {mileage} = data;
-    const {fuel} = data;
-    const {year} = data;
-    const {engine} = data;
+    const {mark,
+      model,
+      price,
+      mileage,
+      fuel,
+      year,
+      engine
+    } = data;
     return (
         <div className="product-card">
             <div className="photoBox">
-                <img src="/Photo/car2.jpg"/>
+              <img src={inchVorMIBan} alt="" />
             </div>
             <h4 className="carModelText">{mark} {model}  {engine}</h4>
             <p className="carPrice">{price}</p>
             <div className="carCardFooter">
-                <p className="footerText">{mileage}</p>
-                <p className="footerText">{fuel}</p>
-                <p className="footerText">{year}</p>
+              <p className="footerText">{mileage}</p>
+              <p className="footerText">{fuel}</p>
+              <p className="footerText">{year}</p>
             </div>
         </div>
     )

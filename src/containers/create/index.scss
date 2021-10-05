@@ -11,6 +11,7 @@
         flex-direction: row;
         background-color: beige;
 
+
         button {
           flex: 1;
           height: 180px;
@@ -20,6 +21,9 @@
           outline: none;
           font-weight: 500;
           font-size: 18px;
+          &.active{
+            color: blue;
+          }
         }
       }
     }

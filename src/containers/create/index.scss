@@ -1,4 +1,3 @@
-
 .crate-screen {
   width: 100%;
   .crate-content {
@@ -6,7 +5,77 @@
     display: flex;
     flex-direction: column;
     .steps-control {
-      //width: wod
+      &-list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: beige;
+
+        button {
+          flex: 1;
+          height: 180px;
+          background-color: #fff;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.description {
+  background-color: #f9f9f9;
+  min-height: 400px;
+  padding-top: 25px;
+
+  &-content {
+    display: flex;
+    width: 100%;
+    column-gap: 25px;
+
+    &-left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 1;
+      gap: 20px;
+
+      &_item {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 14px;
+          line-height: 20px;
+          color: #161616;
+          margin-left: 5px;
+          text-transform: capitalize;
+        }
+
+        input {
+          height: 50px;
+          min-width: 250px;
+          background: #ffffff;
+          border: 1px solid #ededed;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+          border-radius: 4px;
+          font-size: 18px;
+          color: #161616;
+          padding: 10px;
+          box-sizing: border-box;
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &-right {
+      flex: 1;
     }
   }
 }

@@ -1,9 +1,37 @@
 import React from 'react';
+import GroupCheckBox from "../groupCheckBox";
+import {additionalInfoOptions} from "../../constants/additionalInfoOptions";
 
-const Additional = () => {
+
+const Additional = ({ handleFieldChange, productInfo }) => {
+
+  const handleOptionsChange = (newName) => {
+    handleFieldChange({
+      target: {
+        name: newName,
+        value: !productInfo[newName]
+      }
+    })
+  }
+
+  const selectedOptions = (() => {
+      return additionalInfoOptions.reduce((aggr,option) => {
+        if(productInfo[option.name]) {
+          aggr.push(option.name);
+        }
+        return aggr
+      } ,[])
+  })();
+
   return (
     <div>
-      Additional
+      <div className="container">
+        <GroupCheckBox
+          options={additionalInfoOptions}
+          selectedOptions={selectedOptions}
+          onChange={handleOptionsChange}
+        />
+      </div>
     </div>
   )
 }

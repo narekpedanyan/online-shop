@@ -48,8 +48,6 @@ const Create = () => {
     setStep(routeData);
   };
 
-  console.log(productInfo)
-
   return (
     <section className="crate-screen">
       <div className="crate-content">
@@ -77,7 +75,7 @@ const Create = () => {
           </div>
         </div>
         <div>
-          <div>{route({handleFieldChange})}</div>
+          <div>{route({handleFieldChange, productInfo})}</div>
         </div>
       </div>
     </section>

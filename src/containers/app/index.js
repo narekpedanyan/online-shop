@@ -12,12 +12,8 @@ function App() {
     <main className="App">
       <Header />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/create">
-          <Create />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route path="/create" component={Create} />
       </Switch>
     </main>
   );

@@ -14,6 +14,19 @@ export const carInfoModel = {
   isPartPayable: false,
   vin: "",
   isMax: false,
+  abc: true,
+  esp:false,
+  mirrorControl:false,
+  rainSensor:false,
+  trc:false,
+  turbo:false,
+  sitControl:true,
+  lightSensor:false,
+  ebd:false,
+  boardComputer:false,
+  mirrorAutoControl:false,
+  cruiseControl:false,
+  moreInfoText:""
 };
 
 export const descriptionData = {

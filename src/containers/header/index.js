@@ -1,5 +1,8 @@
 import React from 'react';
 import './index.scss';
+import {
+   NavLink
+} from "react-router-dom";
 import car1 from "./img/car 1.jpg";
 import car2 from "./img/car2.png";
 import car3 from "./img/car 3.png";
@@ -73,7 +76,7 @@ const Header = () => {
                   </svg>
               </i>
               <a className='place' href='#'>Երևան</a>
-              <button type='button' className='addListButton'>Տեղադրել հայտարարություն</button>
+              <NavLink to='/create' className='addListButton'>Տեղադրել հայտարարություն</NavLink>
               <span className='border'>
                 </span>
               <button type='button' className='chengLen'>Հայ</button>

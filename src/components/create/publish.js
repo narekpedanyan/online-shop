@@ -1,9 +1,19 @@
 import React from 'react';
+import {useDispatch} from "react-redux";
+import {addProduct} from "../../features/products/productsSlice";
 
-const Publish = () => {
+const Publish = ({productInfo}) => {
+  const dispatch = useDispatch();
+  const publishProduct = () => {
+    dispatch(addProduct(productInfo))
+  }
   return (
     <div>
-      Publish
+      <div className="container">
+        <button type="button" onClick={publishProduct}>
+          Add product
+        </button>
+      </div>
     </div>
   )
 }

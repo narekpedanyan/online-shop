@@ -78,20 +78,6 @@ const Header = () => {
                 </span>
               <button type='button' className='chengLen'>Հայ</button>
           </div>
-          <div id='filterField'>
-              <img className='passenger' src={car1}/>
-              <p className='car1'>Մարդատար</p>
-              <img className='MotorEquipment' src={car2}/>
-              <p className='car2'>Մոտոտեխնիկա</p>
-              <img className='Bus' src={car3}/>
-              <p className='car3'>Ավտոբուս</p>
-              <img className='Truck' src={car4}/>
-              <p className='car4'>Բեռնատար</p>
-              <img className='SpecialEquipment' src={car5}/>
-              <p className='car5'>Հատուկ տեխնիկա</p>
-              <img className='WaterEquipment' src={car6}/>
-              <p className='car6'>Ջրային տեխնիկա</p>
-          </div>
       </div>
 
   )

@@ -38,9 +38,9 @@ const Description = ({handleFieldChange}) => {
       <div className="container">
         <div className="description-content">
           <div className="description-content-left">
-            {leftBlockData.map((inputName) => {
+            {leftBlockData.map((inputName, index) => {
               return (
-                <div className="description-content-left_item">
+                <div className="description-content-left_item" key={index}>
                   <label>{inputName}</label>
                   <input
                     className="description-input"

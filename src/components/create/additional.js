@@ -27,8 +27,8 @@ const Additional = ({ handleFieldChange, productInfo }) => {
     <div>
       <div className="container">
         <GroupCheckBox
-          options={additionalInfoOptions}
           selectedOptions={selectedOptions}
+          options={additionalInfoOptions}
           onChange={handleOptionsChange}
         />
       </div>

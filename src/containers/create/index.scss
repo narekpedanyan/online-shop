@@ -83,3 +83,61 @@
     }
   }
 }
+
+.resources {
+  .resources-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+    .new-image-frame {
+      background: #F5F5F5;
+      border-radius: 8px;
+      height: 255px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .remove-btn {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: darkgray;
+        color: #fff;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+      }
+      
+      @keyframes showCloseButton {
+        from {
+          opacity: 0;
+          pointer-events: none;
+        }
+        to {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+
+      &:hover {
+        .remove-btn {
+          animation-name: showCloseButton;
+          animation-duration: .3s;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+        }
+      }
+    }
+  }
+}

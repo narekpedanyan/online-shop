@@ -33,7 +33,6 @@ const Create = () => {
   const [step, setStep] = useState(steps["description"]);
   const [productInfo, setProductInfo] = useState(carInfoModel);
   const {route} = step;
-
   const handleFieldChange = (e) => {
     const {name, value} = e.target;
     setProductInfo((prev) => {
@@ -75,7 +74,7 @@ const Create = () => {
           </div>
         </div>
         <div>
-          <div>{route({handleFieldChange, productInfo})}</div>
+          {route({handleFieldChange, productInfo})}
         </div>
       </div>
     </section>

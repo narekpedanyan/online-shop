@@ -2,18 +2,16 @@
 .product-card {
   width: 282px;
   height: 330px;
-  border: 1px solid black;
+  margin-bottom: 24px;
 }
 
 .photoBox {
   width: 282px;
   height: 192px;
-  border-bottom: 1px solid black;
 }
 
 .carModelText {
   margin: 16px;
-
 }
 
 .carPrice {
@@ -43,12 +41,28 @@
 
 .BannerSection {
   height: 344px;
-  background-color: gray;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.NewProducts{
+.NewProducts {
   padding: 56px 0;
+}
+
+.immediat {
+  height: 32px;
+  width: 74px;
+  left: 119px;
+  top: 234px;
+  border-radius: 4px;
+  background-color: #D94D3E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.praceAndImmediate {
+  display: flex;
+  align-items: baseline;
 }

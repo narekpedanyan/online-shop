@@ -2,12 +2,19 @@
 .filters {
 
 }
-
-.products {
   .products-grid {
     width: 100%;
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(4, 3fr);
   }
+.foooterLeftSaid{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+}
+.footerLogo{
+  display: flex;
+align-items: center;
 }

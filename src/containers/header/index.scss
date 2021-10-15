@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap');
+
+
 header {
   width: 100%;
   height: 90px;
@@ -22,6 +25,10 @@ header {
   bottom: 23px;
 }
 
+#filterField{
+  margin-top: 10px;
+}
+
 .carSvg {
   position: absolute;
   top: 7px;
@@ -43,6 +50,10 @@ header {
   left: 174px;
   top: 24px;
   font-size: 30px;
+  text-decoration: none;
+  color: #161616;
+
+
 }
 
 .location {
@@ -56,6 +67,8 @@ header {
   position: absolute;
   left: 18.5%;
   top: 31px;
+  text-decoration: none;
+
 }
 
 .addListButton {
@@ -67,7 +80,15 @@ header {
   background-color: #5F5CFF;
   border-radius: 7px;
   border: none;
-  color: aliceblue
+  color: aliceblue;
+  font-family: 'Georama', sans-serif;
+  text-decoration: none;
+
+}
+
+.p{
+  margin-left: 15px;
+  margin-top: 12px;
 }
 
 .border {
@@ -93,73 +114,79 @@ header {
 
 .passenger {
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 120px;
 }
 
 .MotorEquipment {
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 332px;
 }
 
 .Bus {
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 560px;
 }
 
 .Truck {
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 800px;
 }
 
 .SpecialEquipment {
   position: absolute;
-  top: 150px;
+  top: 120px;
   right: 383px;
 }
 
 .WaterEquipment {
   position: absolute;
-  top: 150px;
+  top: 120px;
   right: 145px;
 }
 
 .car1 {
   position: absolute;
-  top: 270px;
+  top: 240px;
   left: 150px;
+  font-family: 'Georama', sans-serif;
 }
 
 .car2 {
   position: absolute;
-  top: 270px;
+  top: 240px;
   left: 336px;
+  font-family: 'Georama', sans-serif;
 }
 
 .car3 {
   position: absolute;
-  top: 270px;
+  top: 240px;
   left: 590px;
+  font-family: 'Georama', sans-serif;
 }
 
 .car4 {
   position: absolute;
-  top: 270px;
+  top: 240px;
   left: 830px;
+  font-family: 'Georama', sans-serif;
 }
 
 .car5 {
   position: absolute;
-  top: 270px;
+  top: 240px;
   right: 381px;
+  font-family: 'Georama', sans-serif;
 }
 
 .car6 {
   position: absolute;
-  top: 270px;
+  top: 240px;
   right: 145px;
+  font-family: 'Georama', sans-serif;
 }
 

@@ -3,18 +3,14 @@ import './index.scss';
 import {
    NavLink
 } from "react-router-dom";
-import car1 from "./img/car 1.jpg";
-import car2 from "./img/car2.png";
-import car3 from "./img/car 3.png";
-import car4 from "./img/car 4.png";
-import car5 from "./img/car 5.png";
-import car6 from "./img/car 6.png";
+
 
 const Header = () => {
   return (
 
       <div className="Header">
           <div id='header'>
+              <NavLink to={'/'}>
                 <span className='blue'>
                     <svg width="31" height="15" viewBox="0 0 33 17" fill="none" xmlns="http://www.w3.org/2000/svg"
                          className='carSvg'>
@@ -67,7 +63,8 @@ const Header = () => {
     fill="white"/>
 </svg>
                 </span>
-              <b className='deo'>DEO</b>
+              </NavLink>
+              <NavLink to={'/'}><b className='deo'>DEO</b></NavLink>
               <i>
                   <svg className='location' viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -76,11 +73,12 @@ const Header = () => {
                   </svg>
               </i>
               <a className='place' href='#'>Երևան</a>
-              <NavLink to='/create' className='addListButton'>Տեղադրել հայտարարություն</NavLink>
+              <NavLink to='/create' className='addListButton'><p className='p'>Տեղադրել հայտարարություն</p></NavLink>
               <span className='border'>
                 </span>
               <button type='button' className='chengLen'>Հայ</button>
           </div>
+          <hr/>
       </div>
 
   )

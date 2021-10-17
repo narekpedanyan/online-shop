@@ -46,7 +46,7 @@ const Home = () => {
                     <h1 style={{margin: "56px 0"}}>Թոփ հայտարարություններ</h1>
                     <div className="products-grid">
                         {
-                            top.map((item, index) => (<ProductCard data={item} key={index}/>))
+                            top.reverse().map((item, index) => (<ProductCard data={item} key={index}/>))
                         }
                     </div>
                 </div>

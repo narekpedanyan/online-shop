@@ -4,7 +4,6 @@ import {additionalInfoOptions} from "../../constants/additionalInfoOptions";
 
 
 const Additional = ({ handleFieldChange, productInfo }) => {
-
   const handleOptionsChange = (newName) => {
     handleFieldChange({
       target: {

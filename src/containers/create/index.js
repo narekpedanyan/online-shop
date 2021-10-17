@@ -6,24 +6,50 @@ import Publish from "../../components/create/publish";
 import "./index.scss";
 import {carInfoModel} from "../../constants/carInfo";
 
+const STEPS = {
+  description: 'description',
+  additional: 'additional',
+  resources: 'resources',
+  publish: 'publish'
+};
+
+const RouteComponent = ({ name, handleFieldChange, productInfo }) => {
+  const data = {
+    handleFieldChange: handleFieldChange,
+    productInfo: productInfo
+  };
+  switch(name) {
+    case STEPS.description:
+      return <Description {...data}/>;
+    case STEPS.additional:
+      return <Additional {...data}/>;
+    case STEPS.resources:
+      return <Resources {...data}/>;
+    case STEPS.publish:
+      return <Publish {...data}/>;
+    default:
+      return null;
+  }
+}
+
 const steps = {
   description: {
-    key: "description",
+    key: STEPS.description,
     label: "Description",
     route: Description,
   },
   additional: {
-    key: "additional",
+    key: STEPS.additional,
     label: "Additional",
     route: Additional,
   },
   resources: {
-    key: "resources",
+    key: STEPS.resources,
     label: "Resources",
     route: Resources,
   },
   publish: {
-    key: "publish",
+    key: STEPS.publish,
     label: "Publish",
     route: Publish,
   },
@@ -32,8 +58,11 @@ const steps = {
 const Create = () => {
   const [step, setStep] = useState(steps["description"]);
   const [productInfo, setProductInfo] = useState(carInfoModel);
-  const {route} = step;
   const handleFieldChange = (e) => {
+    if (!e) {
+      setProductInfo(carInfoModel);
+      return;
+    }
     const {name, value} = e.target;
     setProductInfo((prev) => {
       return {
@@ -74,7 +103,11 @@ const Create = () => {
           </div>
         </div>
         <div>
-          {route({handleFieldChange, productInfo})}
+          <RouteComponent
+            handleFieldChange={handleFieldChange}
+            productInfo={productInfo}
+            name={step.key}
+          />
         </div>
       </div>
     </section>

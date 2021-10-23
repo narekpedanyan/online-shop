@@ -21,20 +21,37 @@ const Home = () => {
     return (
         <React.Fragment>
           <section>
-            <div id='filterField'>
-              <img className='passenger' src={car1}/>
-              <p className='car1'>Մարդատար</p>
-              <img className='MotorEquipment' src={car2}/>
-              <p className='car2'>Մոտոտեխնիկա</p>
-              <img className='Bus' src={car3}/>
-              <p className='car3'>Ավտոբուս</p>
-              <img className='Truck' src={car4}/>
-              <p className='car4'>Բեռնատար</p>
-              <img className='SpecialEquipment' src={car5}/>
-              <p className='car5'>Հատուկ տեխնիկա</p>
-              <img className='WaterEquipment' src={car6}/>
-              <p className='car6'>Ջրային տեխնիկա</p>
-            </div>
+              <div id='filter'>
+                <span>
+                    <img src={car1}/>
+                <p className='text'>Մարդատար</p>
+                </span>
+
+                  <span>
+                    <img src={car2}/>
+                <p className='text'>Մոտոտեխնիկա</p>
+                </span>
+
+                  <span>
+                    <img src={car3}/>
+                <p className='text'>Ավտոբուս</p>
+                </span>
+
+                  <span>
+                    <img src={car4}/>
+                <p className='text'>Բեռնատար</p>
+                </span>
+
+                  <span>
+                    <img src={car5}/>
+                <p className='text'>Հատուկ տեխնիկա</p>
+                </span>
+
+                  <span>
+                    <img src={car6}/>
+                <p className='text'>Ջրային տեխնիկա</p>
+                </span>
+              </div>
           </section>
             <section className="products">
                 <div className="container">

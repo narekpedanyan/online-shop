@@ -27,6 +27,7 @@ const Resources = ({
      const imageFile = files[0];
      const {lastModified, name: imageName, size, type} = imageFile;
      const promise = imageFileToBase64(imageFile);
+       console.log(imageFile)
      promise.then((res) => {
        handleFieldChange({
          target: {
@@ -40,7 +41,9 @@ const Resources = ({
              type: type
            }]
          }
+
        });
+
      }).catch((err) => {
        console.log(err);
      })

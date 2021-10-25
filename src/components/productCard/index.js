@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
 import Slider from "../photoSlider";
+import {Link} from "react-router-dom";
 
 const ProductCard = ({data}) => {
   const {
@@ -14,9 +15,10 @@ const ProductCard = ({data}) => {
     engine,
     isSaleImmediat,
     img,
+    productId
   } = data;
   return (
-    <div className="product-card">
+    <Link to={`/detailed/${productId}`} className="product-card">
       <Slider images={img}/>
         <h4 className="carModelText">{mark} {model} {engine}</h4>
         <div className="praceAndImmediate">
@@ -29,7 +31,7 @@ const ProductCard = ({data}) => {
           <p className="footerText">{fuel}</p>
           <p className="footerText">{year}</p>
         </div>
-    </div>
+    </Link>
 )
 }
 

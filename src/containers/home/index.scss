@@ -12,22 +12,24 @@
   justify-content: space-evenly;
   font-family: 'Roboto', sans-serif;
 
-  .products-grid {
-    width: 100%;
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(4, 3fr);
-  }
 
-  .foooterLeftSaid {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    padding: 35px 0;
-  }
+}
 
-  .footerLogo {
-    display: flex;
-    align-items: center;
-  }
+.products-grid {
+  width: 100%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 3fr);
+}
+
+.foooterLeftSaid {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
 }

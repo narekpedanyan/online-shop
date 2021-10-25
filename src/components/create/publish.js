@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addProduct} from "../../features/products/productsSlice";
 import { useHistory } from "react-router-dom";
 
+
 const Publish = ({handleFieldChange, productInfo}) => {
+  const data = useSelector(({products: {data}}) => data);
   const history = useHistory();
   const [state, setState] = useState('');
   const dispatch = useDispatch();
   const publishProduct = () => {
+    productInfo.productId = 'index' + data.length;
     dispatch(addProduct(productInfo));
     setState('success');
     handleFieldChange(null);
